@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe Prices</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Popup de descuento -->
+  <div id="discount-popup">
+    💸 Oferta del 20% en TODOS los PRODUCTOS por tiempo limitado! ¡NO TE LO PIERDAS! 👀
+    <button onclick="closeDiscountPopup()">×</button>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Deluxe Prices">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#new-products">Novedades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="banner">
+    <h2>Bienvenido a Deluxe Prices</h2>
+    <p>Descubre los mejores productos tecnológicos y accesorios gamer a precio mayorista.</p>
+    <a href="#products" class="btn">Ver Productos</a>
+  </section>
+    
+  <section id="products" class="products">
+    <h2>Nuestros Productos</h2>
+    <div class="product-list">
+      <div class="product">
+        <img class="product-img" src="gen3.jpeg" alt="Airpods Gen 3" onclick="changeImage(this, ['gen3-1.jpg', 'gen3-2.jpg'])">
+        <h3>Airpods Gen 3</h3>
+        <p class="price"><s>Q306.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q255</p>
+        <button class="buy-btn" onclick="addToCart('Airpods Gen 3', 255)">Agregar al Carrito</button>
+      </div>
+
+      <div class="product">
+        <img class="product-img" src="pro1.jpeg" alt="Airpods Pro 1" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
+        <h3>Airpods Pro 1</h3>
+        <p class="price"><s>Q318.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q275</p>
+        <button class="buy-btn" onclick="addToCart('Airpods Pro 1', 275)">Agregar al Carrito</button>
+      </div>
+
+      <div class="product">
+        <img class="product-img" src="pro2.jpeg" alt="Airpods Pro 2" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
+        <h3>Airpods Pro 2</h3>
+        <p class="price"><s>Q342.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q285</p>
+        <button class="buy-btn" onclick="addToCart('Airpods Pro 2', 285)">Agregar al Carrito</button>
+      </div>
+      <div class="product offer">
+        <img src="promogen3.jpeg" alt="Airpods Gen 3 Oferta">
+        <h3>Oferta: Airpods Gen 3</h3>
+        <p><s>Q450.00</s></p>
+        
+        <p>2 x Q420.00</p>
+        <button class="buy-btn" onclick="addToCart('Oferta Airpods Gen 3', 420)">Agregar al Carrito</button>
+      </div>
+    </div>
+    <div class="product offer">
+      <img src="promogen2.jpeg" alt="Airpods Pro 2 Oferta">
+      <h3>Oferta: Airpods Pro 2</h3>
+      <p><s>Q.600</s></p>
+      
+      <p>2 x Q500.00</p>
+      <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 2', 500)">Agregar al Carrito</button>
+    </div>
+    <div class="product offer">
+      <img src="promogen1.jpeg" alt="Airpods Pro 1 Oferta">
+      <h3>Oferta: Airpods Pro 1</h3>
+      <p><s>Q550.00</s></p>
+      
+      <p>2 x Q480.00</p>
+      <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 1', 428)">Agregar al Carrito</button>
+    </div>
+  </section>
+
+  <section id="new-products" class="products">
+    <h2>Productos Nuevos</h2>
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="carousel-container">
+        <div class="carousel-images">
+          <img src="2-2.png" alt="Airpods Pro 2">
+          <img src="3-3.png" alt="Airpods Pro">
+          <img src="4092.avif" alt="Airpods Gen 3">
+          <img src="4667.avif" alt="Airpods Gen 3">
+          <img src="air.jpg" alt="Airpods Gen 3">
+          <img src="airpods.jpg" alt="Airpods Gen 3">
+          <img src="1366_2000.jpeg" alt="Airpods Gen 3">
+          <img src="ae77c043569b414293681f98acaf64f4.jpg" alt="Airpods Gen 3">
+          <img src="maxresdefault (1).jpg" alt="Airpods Gen 3">
+          
+        </div>
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+    
+  <div class="cart-icon" id="cart-toggle">
+    🛒 <span id="cart-count">0</span>
+  </div>
+
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h2>Carrito de Compras</h2>
+        <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <p>Tu carrito está vacío</p>
+    </div>
+    <div class="cart-footer">
+        <p>Total: Q<span id="cart-total">0.00</span></p>
+        <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+    </div>
+  </div>
+<!-- Apartado de Envíos (Mejorado) -->
+<section id="shipping" class="shipping">
+  <div class="shipping-container">
+      <h2>📦 Envíos rápidos y seguros</h2>
+      <p>🚀 Enviamos a toda <strong>Guatemala</strong> en <strong>2 a 3 días hábiles</strong>.</p>
+      <p>🔒 Pago seguro y confiable.</p>
+      <p>📍 Rastrea tu pedido en cualquier momento.</p>
+      <p class="highlight">¡Compra ahora y recibe tu pedido sin preocupaciones! 🏡</p>
+      <a href="#products" class="btn">Comprar Ahora</a>
+  </div>
+</section>
+
+  <section id="contact" class="contact">
+    <h2>Contáctanos</h2>
+    <p>Si tienes preguntas, escríbenos en nuestras redes sociales o llena el formulario.</p>
+    <div class="form-container">
+      <form action="https://formspree.io/f/mbldepvn" method="POST">
+        <label>Tu Nombre: <input type="text" name="name" placeholder="Tu Nombre" required></label>
+        <label>Tu Correo: <input type="email" name="email" placeholder="Tu Correo" required></label>
+        <label>Tu Mensaje: <textarea name="message" placeholder="Escribe tu mensaje" required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Deluxe Prices</h3>
+        <p>&copy; 2025 Deluxe Prices</p>
+        <p>Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Contacto</h3>
+        <p>Email: infodeluxeprices@gmail.com</p>
+        <p>Tel: +502 5907 3864</p>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul class="social">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

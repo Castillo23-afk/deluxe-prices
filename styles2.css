@@ -10,11 +10,13 @@
   --btn-hover: #7459C1;
   --transition-speed: 0.3s;
 }
+
 /* Animación suave de entrada */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-50px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
@@ -257,67 +259,142 @@ footer {
     opacity: 1;
   }
 }
+
 /* Estilos para el apartado de envíos */
 .shipping {
-    background: linear-gradient(135deg, #633edb, #8A6FDF);
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    margin: 30px auto;
-    max-width: 900px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .shipping h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  .shipping p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .shipping .highlight {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .shipping .btn {
-    display: inline-block;
-    background: white;
-    color: #000000;
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: 0.3s;
-  }
-  
-  .shipping .btn:hover {
-    background: #ffcccc;
-  }
+  background: linear-gradient(135deg, #633edb, #8A6FDF);
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shipping h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.shipping p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.shipping .highlight {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.shipping .btn {
+  display: inline-block;
+  background: white;
+  color: #000000;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.shipping .btn:hover {
+  background: #ffcccc;
+}
+
 /* Popup de descuento */
 #discount-popup {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--btn-bg);
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 16px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--btn-bg);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 #discount-popup button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+  .products {
+    justify-content: space-around;
+  }
+
+  .product {
+    width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter {
+    width: 90%;
+  }
+
+  .products {
+    justify-content: space-evenly;
+  }
+
+  .product {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .header .logo img {
+    width: 120px;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .cart-toggle {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}

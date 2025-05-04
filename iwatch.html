@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audífonos - Deluxe Prices</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="scripts.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deluxe Prices">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="audifonos.html">Audífonos</a></li>
+                <li><a href="cargadores.html">Cargadores</a></li>
+                <li><a href="iwatch.html">iWatch</a></li>
+                
+            </ul>
+        </nav>
+       
+    </header>
+
+
+    <section class="filter">
+        <h2>Filtros</h2>
+        <button id="apply-filters">Aplicar filtros</button>
+
+        <select id="category-filter">
+            <option value="todos">Todos</option>
+            <option value="inalambricos">Con gomitas</option>
+            <option value="cableados">Sin gomitas</option>
+        </select>
+        <input type="text" id="search" placeholder="Buscar productos">
+
+        <!-- Dropdown de ordenación -->
+        <select id="sort-order">
+            <option value="default">Orden predeterminado</option>
+            <option value="popularity">Ordenar por popularidad</option>
+            <option value="rating">Ordenar por puntuación media</option>
+            <option value="latest">Ordenar por los últimos</option>
+            <option value="price-desc">Ordenar por precio: alto a bajo</option>
+            <option value="price-asc">Ordenar por precio: bajo a alto</option>
+        </select>
+    </section>
+
+    <section class="products" id="product-list">
+        <div class="product" data-price="220" data-rating="4" data-popularity="120" data-date="2025-05-01">
+            <img src="MNK23LZ-A-APPLE-1200X1200-1.-500x500.jpg" alt="iWatch SE">
+            <h3>iWatch SE</h3>
+            <p>Q220</p>
+            <button class="add-to-cart" data-product="iWatch SE" data-price="220">Añadir al carrito</button>
+        </div>
+        <div class="product" data-price="200" data-rating="5" data-popularity="150" data-date="2025-04-28">
+            <img src="81LaeWvEbGL._AC_SL1500_._SX600_.jpg" alt="iWatch Ultra">
+            <h3>iWatch Ultra</h3>
+            <p>Q200</p>
+            <button class="add-to-cart" data-product="iWatch Ultra" data-price="200">Añadir al carrito</button>
+        </div>
+        <div class="product" data-price="420" data-rating="3" data-popularity="100" data-date="2025-03-15">
+            <img src="item_5735_n85vszcitem4rtbfqccr-1.png" alt="iWatch Ultra 2">
+            <h3>iWatch Ultra 2</h3>
+            <p>Q420</p>
+            <button class="add-to-cart" data-product="iWatch Ultra 2" data-price="420">Añadir al carrito</button>
+        </div>
+        <div class="product" data-price="350" data-rating="3" data-popularity="100" data-date="2025-03-15">
+            <img src="41mm-45mm-49mm-Ultra-8-Mini-Smartwatch-Series-8-Heart-Rate-Reloj-Inteligente-NFC-GS-Ultra-8-Smart-Watch-GS8-Ultra.avif" alt="iWatch Mini">
+            <h3>iWatch Mini</h3>
+            <p>Q350</p>
+            <button class="add-to-cart" data-product="iWatch Mini" data-price="350">Añadir al carrito</button>
+        </div>
+        
+    </section>
+    <section id="shipping" class="shipping">
+        <div class="shipping-container">
+            <h2>📦 Envíos rápidos y seguros</h2>
+            <p>🚀 Enviamos a toda <strong>Guatemala</strong> en <strong>2 a 3 días hábiles</strong>.</p>
+            <p>🔒 Pago seguro y confiable.</p>
+            <p>📍 Rastrea tu pedido en cualquier momento.</p>
+            <p class="highlight">¡Compra ahora y recibe tu pedido sin preocupaciones! 🏡</p>
+            <a href="#products" class="btn">Comprar Ahora</a>
+        </div>
+      </section>
+
+    
+
+    <!-- Panel del carrito -->
+    <div id="cart-panel" class="cart-panel">
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: Q0.00</div>
+        <button id="checkout">Finalizar compra</button>
+
+        <button id="close-cart">Cerrar</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Deluxe Prices</h3>
+            <p>&copy; 2025 Deluxe Prices</p>
+            <p>Todos los derechos reservados.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <p>Email: infodeluxeprices@gmail.com</p>
+            <p>Tel: +502 5907 3864</p>
+          </div>
+          <div class="footer-column">
+            <h3>Redes Sociales</h3>
+            <ul class="social">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="https://www.instagram.com/deluxeprices/">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
+
+<!-- Botón del carrito -->
+<div id="cart-toggle" class="cart-toggle">
+  🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- Panel del carrito -->
+<div id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h3>Tu Carrito</h3>
+    <button id="close-cart">✖</button>
+  </div>
+  <div id="cart-items" class="cart-items">
+    <!-- Productos agregados aparecerán aquí -->
+  </div>
+  <div class="cart-footer">
+    <p>Total: Q<span id="cart-total">0.00</span></p>
+    <button onclick="checkout()">Finalizar Compra</button>
+  </div>
+</div>

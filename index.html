@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
+
 <body>
 
   <!-- Popup de descuento -->
@@ -21,10 +22,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#products">Productos</a></li>
-        <li><a href="#new-products">Novedades</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+                <li><a href="audifonos.html">Audífonos</a></li>
+                <li><a href="cargadores.html">Cargadores</a></li>
+                <li><a href="iwatch.html">iWatch</a></li>
       </ul>
     </nav>
   </header>
@@ -43,7 +44,7 @@
         <h3>Airpods Gen 3</h3>
         <p class="price"><s>Q306.00</s> <span class="discount">20% Descuento</span></p>
         <p class="price-discount">Q225</p>
-        <button class="buy-btn" onclick="addToCart('Airpods Gen 3', 255)">Agregar al Carrito</button>
+        <button class="buy-btn" onclick="addToCart('Airpods Gen 3', 225)">Agregar al Carrito</button>
       </div>
 
       <div class="product">
@@ -51,22 +52,37 @@
         <h3>Airpods Pro 1</h3>
         <p class="price"><s>Q318.00</s> <span class="discount">20% Descuento</span></p>
         <p class="price-discount">Q245</p>
-        <button class="buy-btn" onclick="addToCart('Airpods Pro 1', 275)">Agregar al Carrito</button>
+        <button class="buy-btn" onclick="addToCart('Airpods Pro 1', 245)">Agregar al Carrito</button>
+      </div>
+      <div class="product">
+        <img class="product-img" src="pro2.jpeg" alt="Airpods Pro 2" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
+        <h3>Airpods Pro 2</h3>
+        <p class="price"><s>Q342.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q255</p>
+        <button class="buy-btn" onclick="addToCart('Airpods Pro 2', 255)">Agregar al Carrito</button>
       </div>
       <div class="product">
         <img class="product-img" src="producto-Power-Bank-Apple-Magsafe-para-iPhone.png" alt="Airpods Pro 1" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
         <h3>Cargador MagSafe</h3>
         <p class="price"><s>Q350.00</s> <span class="discount">20% Descuento</span></p>
         <p class="price-discount">Q290</p>
-        <button class="buy-btn" onclick="addToCart('Airpods Pro 1', 290)">Agregar al Carrito</button>
+        <button class="buy-btn" onclick="addToCart('MagSafe', 290)">Agregar al Carrito</button>
+      </div>
+      <div class="product">
+        <img class="product-img" src="blue.png" alt="Airpods Max" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
+        <h3>Airpods Max</h3>
+        <p class="price"><s>Q500.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q420</p>
+        <button class="buy-btn" onclick="addToCart('Airpods Max', 420)">Agregar al Carrito</button>
       </div>
 
+      
       <div class="product">
-        <img class="product-img" src="pro2.jpeg" alt="Airpods Pro 2" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
-        <h3>Airpods Pro 2</h3>
-        <p class="price"><s>Q342.00</s> <span class="discount">20% Descuento</span></p>
-        <p class="price-discount">Q255</p>
-        <button class="buy-btn" onclick="addToCart('Airpods Pro 2', 285)">Agregar al Carrito</button>
+        <img class="product-img" src="watch435_FZ.jpg" alt="Apple Watch" onclick="changeImage(this, ['gen2-1.jpg', 'gen2-2.jpg'])">
+        <h3>IWatch</h3>
+        <p class="price"><s>Q350.00</s> <span class="discount">20% Descuento</span></p>
+        <p class="price-discount">Q225</p>
+        <button class="buy-btn" onclick="addToCart('Apple Watch', 225)">Agregar al Carrito</button>
       </div>
       <div class="product offer">
         <img src="promogen3.jpeg" alt="Airpods Gen 3 Oferta">
@@ -76,23 +92,56 @@
         <p>2 x Q400.00</p>
         <button class="buy-btn" onclick="addToCart('Oferta Airpods Gen 3', 400)">Agregar al Carrito</button>
       </div>
+      <div class="product offer">
+        <img src="promogen2.jpeg" alt="Airpods Pro 2 Oferta">
+        <h3>Oferta: Airpods Pro 2</h3>
+        <p><s>Q.570</s></p>
+        
+        <p>2 x Q450.00</p>
+        <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 2', 450)">Agregar al Carrito</button>
+      </div>
+      <div class="product offer">
+        <img src="promogen1.jpeg" alt="Airpods Pro 1 Oferta">
+        <h3>Oferta: Airpods Pro 1</h3>
+        <p><s>Q550.00</s></p>
+        
+        <p>2 x Q440.00</p>
+        <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 1', 440)">Agregar al Carrito</button>
+      </div>
     </div>
-    <div class="product offer">
-      <img src="promogen2.jpeg" alt="Airpods Pro 2 Oferta">
-      <h3>Oferta: Airpods Pro 2</h3>
-      <p><s>Q.570</s></p>
-      
-      <p>2 x Q450.00</p>
-      <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 2', 450)">Agregar al Carrito</button>
-    </div>
-    <div class="product offer">
-      <img src="promogen1.jpeg" alt="Airpods Pro 1 Oferta">
-      <h3>Oferta: Airpods Pro 1</h3>
-      <p><s>Q550.00</s></p>
-      
-      <p>2 x Q440.00</p>
-      <button class="buy-btn" onclick="addToCart('Oferta Airpods Pro 1', 440)">Agregar al Carrito</button>
-    </div>
+    
+    <section class="categorias">
+      <h2>Compra por Categoría</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <a href="iwatch.html">
+              <img src="watch435_FZ.jpg" alt="iWatch">
+              <p>iWatch</p>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="cargadores.html">
+              <img src="descarga.jpeg" alt="Cargadores">
+              <p>Cargadores</p>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="audifonos.html">
+              <img src="blue.png" alt="Audífonos">
+              <p>Audífonos</p>
+            </a>
+          </div>
+          <!-- Agrega más categorías si lo deseas -->
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+    
+    
+    
+    
   </section>
 
   <section id="new-products" class="products">
@@ -111,6 +160,9 @@
           <img src="ae77c043569b414293681f98acaf64f4.jpg" alt="Airpods Gen 3">
           <img src="maxresdefault (1).jpg" alt="Airpods Gen 3">
           <img src="1699028619_Magsafe201-2.jpg" alt="Airpods Gen 3">
+          <img src="sddefault.jpg" alt="Gen3" >
+          <img src="1-2.png" alt="Airpods Gen 3">
+          <img src="3-2.png" alt="Airpods Gen 3">
           
         </div>
       </div>
@@ -176,7 +228,7 @@
         <h3>Redes Sociales</h3>
         <ul class="social">
           <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="https://www.instagram.com/deluxeprices/">Instagram</a></li>
           <li><a href="#">Twitter</a></li>
         </ul>
       </div>
